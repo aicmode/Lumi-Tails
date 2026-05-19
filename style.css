@@ -358,10 +358,7 @@ a { text-decoration: none; color: inherit; }
 .about__text .section-title { margin-bottom: 1.5rem; }
 .about__btn { margin-top: 2rem; }
 
-@media (max-width: 768px) {
-  .about__inner { grid-template-columns: 1fr; gap: 2.5rem; }
-  .about__img-wrap { aspect-ratio: 3/2; }
-}
+/* about layout は main mobile override (768px) で制御 */
 
 /* ---------- SERVICES ---------- */
 .services { background: var(--ivory); }
@@ -712,12 +709,12 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 560px) { .br-desktop { display: none; } }
 
 /* ============================================================
-   MOBILE OVERRIDES — 640px 以下（スマホ最適化）
+   MOBILE OVERRIDES — 768px 以下（スマホ最適化）
 ============================================================ */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
   /* --- Layout --- */
-  .section { padding: 4rem 0; }
+  .section { padding: 72px 0; }
   .section-header { margin-bottom: 2.5rem; }
 
   /* --- Typography --- */
@@ -728,8 +725,9 @@ a { text-decoration: none; color: inherit; }
   }
   .body-text {
     max-width: 100%;
-    font-size: 0.95rem;
-    line-height: 2;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
     margin-bottom: 1.25rem;
   }
 
@@ -738,19 +736,19 @@ a { text-decoration: none; color: inherit; }
   .hero__title { font-size: clamp(2.6rem, 9vw, 4.5rem); }
   .hero__eyebrow { margin-bottom: 1rem; }
   .hero__sub {
-    font-size: 0.95rem;
-    line-height: 2;
-    letter-spacing: 0.04em;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
     margin-bottom: 2rem;
   }
   .hero__actions { gap: 0.75rem; }
 
   /* --- About --- */
-  .about__inner { gap: 2rem; }
+  .about__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .about__img-wrap { aspect-ratio: 3/2; }
   .about__text { padding: 0; }
   .about__text .btn {
     display: block;
-    width: fit-content;
     margin-inline: auto;
   }
 
@@ -759,7 +757,7 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .card { padding: 1.75rem 1.5rem; }
+  .card { padding: 40px 28px; }
   .card__icon {
     width: 40px;
     height: 40px;
@@ -767,7 +765,7 @@ a { text-decoration: none; color: inherit; }
   }
   .card__text {
     font-size: 0.875rem;
-    line-height: 2;
+    line-height: 1.8;
   }
 
   /* --- Gallery --- */
@@ -785,6 +783,13 @@ a { text-decoration: none; color: inherit; }
     font-size: 0.85rem;
     padding: 0.65rem 0;
   }
+
+  /* --- Buttons --- */
+  .btn {
+    max-width: 280px;
+    width: 100%;
+  }
+  .btn--wide { max-width: 100%; }
 
   /* --- CTA --- */
   .cta__content { padding: 4rem 0; }
