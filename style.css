@@ -431,9 +431,10 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-  .gallery__item--main { grid-row: span 1; aspect-ratio: 4/3; }
+  .gallery__item--main { grid-row: span 1; aspect-ratio: 3/2; }
   .gallery__item--side { aspect-ratio: 4/3; }
   .gallery__item img { height: 100%; }
+  .gallery__item--main img { object-position: center top; }
 }
 
 /* ---------- PRICE ---------- */
