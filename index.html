@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumi Tails — Natural Grooming Salon</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">Lumi Tails</a>
+      <nav class="header__nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#price">Price</a>
+        <a href="#reservation" class="btn btn--outline">Book a Visit</a>
+      </nav>
+      <button class="header__burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__media">
+      <img src="images/dog-hero.jpg" alt="A dog sitting outside" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow fade-up">Natural &middot; Gentle &middot; Luxurious</p>
+      <h1 class="hero__title fade-up">Gentle Care<br /><em>for Every Tail</em></h1>
+      <p class="hero__sub fade-up">大切なワンちゃんのための、やさしさと心地よさを大切にした<br class="br-desktop" />ナチュラルなトリミングサロン。</p>
+      <div class="hero__actions fade-up">
+        <a href="#reservation" class="btn btn--primary">Book a Visit</a>
+        <a href="#services" class="btn btn--ghost">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <div class="about__img-wrap reveal">
+        <img src="images/dog-about.jpg" alt="A dog sitting indoors" class="about__img" />
+      </div>
+      <div class="about__text reveal">
+        <p class="label">Our Story</p>
+        <h2 class="section-title">Where Nature<br /><em>Meets Nurture</em></h2>
+        <p class="body-text">Lumi Tails は、シンプルな想いから生まれました。すべてのワンちゃんは、家族と同じように、やさしく丁寧にケアされるべきだということ。</p>
+        <p class="body-text">肌にやさしい天然素材のプロダクトのみを使用し、繊細な子でも安心できる、穏やかな空間をご用意しています。</p>
+        <p class="body-text">毎回のセッションは、被毛・性格・コンディションに合わせてオーダーメイド。どんな子も、ひとつとして同じではないから。</p>
+        <a href="#reservation" class="btn btn--primary about__btn">Book a Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+      </div>
+      <div class="services__grid">
+        <div class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="24" y1="10" x2="24" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="34" x2="24" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="24" x2="14" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="34" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="card__title">Grooming</h3>
+          <p class="card__text">犬種やライフスタイルに合わせた全身カット。見た目の美しさだけでなく、心地よさにもこだわった丁寧なグルーミングです。</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 22c0-4.418 3.582-8 8-8s8 3.582 8 8c0 2.5-1.2 5-3.2 6.5L24 34l-4.8-5.5C17.2 27 16 24.5 16 22z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="20" y1="36" x2="28" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="34" x2="24" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="card__title">Shampoo</h3>
+          <p class="card__text">お子の肌質に合わせて厳選した、植物由来のやさしいシャンプー。自然由来の清潔感と、やわらかな香りをお届けします。</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 30l3-9 9 3-3 9-9-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M29 21l3-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="33" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="card__title">Nail Care</h3>
+          <p class="card__text">快適な歩行のための、丁寧な爪のケア。できる限り負担を抑えながら、ストレスなくやさしく仕上げます。</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 12c-7.18 0-13 5.82-13 13 0 4.5 2.8 8.5 7 10.5V38h12v-2.5c4.2-2 7-6 7-10.5 0-7.18-5.82-13-13-13z" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="38" x2="28" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M21 25c0-1.657 1.343-3 3-3s3 1.343 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="card__title">Spa Treatment</h3>
+          <p class="card__text">アロマリンス・深部コンディショニングマスク・やさしいブロードライまで。五感でくつろぐ、贅沢なスパタイムをご体験ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label">Our Friends</p>
+        <h2 class="section-title">Happy Tails</h2>
+      </div>
+      <div class="gallery__grid reveal">
+        <div class="gallery__item gallery__item--main">
+          <img src="images/dog-gallery.jpg" alt="A happy dog being held" />
+        </div>
+        <div class="gallery__item gallery__item--side">
+          <img src="images/dog-about.jpg" alt="A dog indoors" />
+        </div>
+        <div class="gallery__item gallery__item--side">
+          <img src="images/dog-hero.jpg" alt="A dog outside" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section class="price section" id="price">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label">Investment</p>
+        <h2 class="section-title">Simple, Honest Pricing</h2>
+      </div>
+      <div class="price__grid">
+        <div class="price-card reveal">
+          <p class="price-card__label">Basic</p>
+          <h3 class="price-card__name">Basic Wash</h3>
+          <p class="price-card__amount">&yen;3,500</p>
+          <ul class="price-card__list">
+            <li>シャンプー &amp; ブロードライ</li>
+            <li>耳のお手入れ</li>
+            <li>バンダナ仕上げ</li>
+          </ul>
+          <a href="#reservation" class="btn btn--outline">Book Now</a>
+        </div>
+        <div class="price-card price-card--featured reveal">
+          <p class="price-card__badge">Most Popular</p>
+          <p class="price-card__label">Standard</p>
+          <h3 class="price-card__name">Full Grooming</h3>
+          <p class="price-card__amount">&yen;6,800</p>
+          <ul class="price-card__list">
+            <li>Basic メニュー全て</li>
+            <li>全身カット</li>
+            <li>爪のカット</li>
+            <li>肉球保湿</li>
+          </ul>
+          <a href="#reservation" class="btn btn--primary">Book Now</a>
+        </div>
+        <div class="price-card reveal">
+          <p class="price-card__label">Premium</p>
+          <h3 class="price-card__name">Premium Spa</h3>
+          <p class="price-card__amount">&yen;9,500</p>
+          <ul class="price-card__list">
+            <li>Full メニュー全て</li>
+            <li>アロマリンス</li>
+            <li>深部コンディショニングマスク</li>
+            <li>ラグジュアリー仕上げ</li>
+          </ul>
+          <a href="#reservation" class="btn btn--outline">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION CTA -->
+  <section class="cta section" id="reservation">
+    <div class="cta__media">
+      <img src="images/dog-cta.jpg" alt="A happy dog with a toy" class="cta__img" />
+      <div class="cta__overlay"></div>
+    </div>
+    <div class="container cta__content reveal">
+      <p class="label label--light">Reserve Your Spot</p>
+      <h2 class="section-title section-title--light">Ready for a <em>Lumi Day?</em></h2>
+      <p class="body-text body-text--light">すべてのお子に最大限の愛情を届けるため、<br class="br-desktop" />ご予約は限定制とさせていただいています。</p>
+      <p class="body-text body-text--light">ご希望のお日にちは、お早めにご連絡ください。</p>
+      <form class="cta__form" id="ctaForm">
+        <div class="form-row">
+          <input type="text" placeholder="お名前" aria-label="お名前" required />
+          <input type="text" placeholder="ワンちゃんのお名前" aria-label="ワンちゃんのお名前" required />
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="お電話番号" aria-label="お電話番号" required />
+          <select aria-label="コースを選ぶ">
+            <option value="" disabled selected>コースを選ぶ</option>
+            <option>Basic Wash &mdash; &yen;3,500</option>
+            <option>Full Grooming &mdash; &yen;6,800</option>
+            <option>Premium Spa &mdash; &yen;9,500</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary btn--wide">Book a Visit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Lumi Tails</p>
+        <p class="footer__tagline">ナチュラルなグルーミングを、心を込めて。</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#price">Price</a>
+        <a href="#reservation">Book</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Lumi Tails. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
