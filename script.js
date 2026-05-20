@@ -25,6 +25,7 @@
   const overlay = document.getElementById('navOverlay');
 
   function openMenu() {
+    header.classList.add('menu-open');
     burger.classList.add('open');
     nav.classList.add('open');
     overlay.classList.add('show');
@@ -34,6 +35,7 @@
   }
 
   function closeMenu() {
+    header.classList.remove('menu-open');
     burger.classList.remove('open');
     nav.classList.remove('open');
     overlay.classList.remove('show');
@@ -55,6 +57,12 @@
   overlay.addEventListener('click', closeMenu);
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && nav.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820 && nav.classList.contains('open')) {
       closeMenu();
     }
   });
