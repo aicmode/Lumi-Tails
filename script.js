@@ -30,6 +30,7 @@
     overlay.classList.add('show');
     document.body.style.overflow = 'hidden';
     burger.setAttribute('aria-label', 'Close menu');
+    burger.setAttribute('aria-expanded', 'true');
   }
 
   function closeMenu() {
@@ -38,7 +39,10 @@
     overlay.classList.remove('show');
     document.body.style.overflow = '';
     burger.setAttribute('aria-label', 'Open menu');
+    burger.setAttribute('aria-expanded', 'false');
   }
+
+  burger.setAttribute('aria-expanded', 'false');
 
   burger.addEventListener('click', () => {
     if (nav.classList.contains('open')) {
@@ -49,6 +53,11 @@
   });
 
   overlay.addEventListener('click', closeMenu);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      closeMenu();
+    }
+  });
 
   /* Close on nav link click */
   nav.querySelectorAll('a').forEach(link => {
@@ -56,7 +65,28 @@
   });
 
   /* ---------- Scroll reveal (IntersectionObserver) ---------- */
-  const revealEls = document.querySelectorAll('.reveal');
+  const revealSelectors = [
+    '.reveal',
+    '.section-header',
+    '.about__img-wrap',
+    '.about__text',
+    '.photo-strip__item',
+    '.card',
+    '.feature__img-wrap',
+    '.feature__text',
+    '.gallery__item',
+    '.gallery__caption',
+    '.price-card',
+    '.atmosphere__content',
+    '.cta__content',
+    '.cta__form'
+  ];
+  const revealEls = Array.from(document.querySelectorAll(revealSelectors.join(',')));
+
+  revealEls.forEach((el, index) => {
+    el.classList.add('reveal');
+    el.style.setProperty('--reveal-delay', `${Math.min((index % 4) * 0.07, 0.21)}s`);
+  });
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
@@ -68,7 +98,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -56px 0px' }
     );
 
     revealEls.forEach(el => observer.observe(el));
@@ -101,7 +131,9 @@
   /* ---------- Smooth scroll for anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const targetId = anchor.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const target = document.querySelector(targetId);
       if (!target) return;
       e.preventDefault();
       const headerH = header.offsetHeight;
