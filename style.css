@@ -41,6 +41,9 @@ body {
   overflow-wrap: break-word;
   word-break: normal;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 img {
   display: block;

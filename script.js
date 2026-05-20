@@ -23,28 +23,38 @@
   const burger = document.getElementById('burger');
   const nav    = document.getElementById('nav');
   const overlay = document.getElementById('navOverlay');
+  const menuStateClasses = ['open', 'is-open', 'active', 'show'];
+
+  function resetMenuState() {
+    header.classList.remove('menu-open', 'open', 'is-open', 'active');
+    burger.classList.remove(...menuStateClasses);
+    nav.classList.remove(...menuStateClasses);
+    overlay.classList.remove(...menuStateClasses);
+    document.body.classList.remove('menu-open', 'nav-open', 'is-open', 'active', 'no-scroll');
+    document.body.style.overflow = '';
+    overlay.style.pointerEvents = '';
+    burger.setAttribute('aria-label', 'Open menu');
+    burger.setAttribute('aria-expanded', 'false');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
 
   function openMenu() {
+    resetMenuState();
     header.classList.add('menu-open');
     burger.classList.add('open');
     nav.classList.add('open');
     overlay.classList.add('show');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('no-scroll');
     burger.setAttribute('aria-label', 'Close menu');
     burger.setAttribute('aria-expanded', 'true');
+    overlay.setAttribute('aria-hidden', 'false');
   }
 
   function closeMenu() {
-    header.classList.remove('menu-open');
-    burger.classList.remove('open');
-    nav.classList.remove('open');
-    overlay.classList.remove('show');
-    document.body.style.overflow = '';
-    burger.setAttribute('aria-label', 'Open menu');
-    burger.setAttribute('aria-expanded', 'false');
+    resetMenuState();
   }
 
-  burger.setAttribute('aria-expanded', 'false');
+  resetMenuState();
 
   burger.addEventListener('click', () => {
     if (nav.classList.contains('open')) {
